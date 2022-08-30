@@ -108,6 +108,7 @@ $(document).ready(function () {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.min.js"></script>
 {{! Initialize Tocbot after you load the script }}
 <script>
+    [...document.querySelectorAll("h1, h2, h3, h4")].filter(e => e.id).forEach(el => el.id = decodeURI(el.id));
     tocbot.init({
         // Where to render the table of contents.
         tocSelector: '.gh-toc',

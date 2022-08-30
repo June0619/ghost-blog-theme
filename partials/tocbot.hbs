@@ -1,30 +1,34 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
 
-    <style>
-        .gh-toc {
-            margin-top: 4vmin; /* Aligns the TOC with the beginning of content */
-        }
+<style>
+.gh-toc {
+    margin-top: 4vmin; /* Aligns the TOC with the beginning of content */
+    min-width: 300px;
+}
 
-        @media (min-width: 1300px) {
-            .gh-toc {
-                position: sticky; /* On larger screens, TOC will stay in the same spot on the page */
-                top: 4vmin;
-                grid-column: wide-start / main-start; /* Place the TOC to the left of the content */
-                grid-row: span 1000;
-                padding-right: 8rem;
-            }
-        }
+@media (min-width: 1300px) {
+    .gh-toc {
+        position: sticky; /* On larger screens, TOC will stay in the same spot on the page */
+        top: 4vmin;
+        grid-column: wide-start / main-start; /* Place the TOC to the left of the content */
+    }
+}
 
-        .gh-toc > .toc-list {
-            position: relative;
-            overflow: hidden;
-        }
+.gh-toc > .toc-list {
+    position: relative;
+    overflow: hidden;
+}
 
-        .toc-list {
-            list-style: none;
-        }
+.toc-list {
+    list-style: none;
+}
 
-        .gh-toc .is-active-link::before {
-            background-color: var(--ghost-accent-color); /* Defines TOC accent color based on Accent color set in Ghost Admin */
-        } 
-    </style>
+.toc-link::before {
+    width: 3px;
+    margin-left: -8px;
+}
+
+.gh-toc .is-active-link::before {
+    background-color: var(--ghost-accent-color); /* Defines TOC accent color based on Accent color set in Ghost Admin */
+}
+</style>
